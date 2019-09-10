@@ -18,7 +18,7 @@ class TripsManagement:
             return ok
         raise TripsManagementError("Miscellaneous Error")
 
-    def update_trip(self, trip: dict):
+    def update_trip(self, trip: dict) -> bool:
         # TODO: Pending
         pass
 

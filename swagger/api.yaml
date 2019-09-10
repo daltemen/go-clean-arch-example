@@ -1,0 +1,47 @@
+swagger: "2.0"
+
+info:
+  title: "Aguila"
+  version: "1.0"
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+host: "$HOST"
+
+consumes:
+- "application/json"
+produces:
+- "application/json"
+
+schemes:
+ - https
+
+paths:
+  /health:
+    get:
+      operationId: api.aguila.health
+      responses:
+        '200':
+          description: 'Module working'
+
+  /trips/counts:
+    get:
+      operationId: api.aguila.counts
+      parameters:
+        - in: query
+          name: city
+          required: false
+          type: string
+      responses:
+        '200':
+          description: 'Module working'
+          schema:
+            $ref: '#/definitions/CountsResponse'
+
+definitions:
+  CountsResponse:
+    type: object
+    properties:
+      count:
+        type: number
