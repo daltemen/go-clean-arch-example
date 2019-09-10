@@ -9,6 +9,7 @@ app = FlaskAPI(__name__)
 mongo_data_source = MongoDataSource()
 trips = TripsManagement(mongo_data_source)
 
+
 @app.route("/")
 def index():
     return "Hi Mi Aguila"
