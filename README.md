@@ -1,5 +1,5 @@
-# go-clean-arch-example
-Go, i mean Python Agile Test
+# python-clean-arch-example
+Python Agile Test
 
 
 For run etl 
